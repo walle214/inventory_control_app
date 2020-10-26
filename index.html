@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App para inventario</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="buttons-container">
+        <button class="btn" id="add-product">Añadir</button>
+        <button class="btn" id="delete-product">Eliminar por codigo</button>
+        <button class="btn" id="find-product">Buscar por codigo</button>
+        <button class="btn" id="list-products">Listar productos</button>
+        <button class="btn" id="list-productsreverse">
+          Listar productos en inverso
+        </button>
+        <button class="btn" id="add-in-position">Añadir en posición</button>
+      </div>
+      <div class="form-container">
+        <h1 id="action">Listar todos</h1>
+        <form class="form" style="display: none" id="form-product">
+          <div class="form-group">
+            <label for="txt-code">Codigo</label>
+            <input type="text" id="txt-code" />
+          </div>
+          <div class="form-group">
+            <label for="txt-name">Nombre</label>
+            <input type="text" id="txt-name" />
+          </div>
+          <div class="form-group">
+            <label for="txt-des">Descripción</label>
+            <input type="text" id="txt-des" />
+          </div>
+          <div class="form-group">
+            <label for="txt-amount">Cantidad</label>
+            <input type="text" id="txt-amount" />
+          </div>
+          <div class="form-group">
+            <label for="txt-price">Costo</label>
+            <input type="text" id="txt-price" />
+          </div>
+        </form>
+        <form class="form" style="display: none" id="form-code">
+          <div class="form-group">
+            <label for="txt-code">Codigo</label>
+            <input type="text" id="txt-code" />
+          </div>
+        </form>
+        <form class="form" style="display: none" id="form-position">
+          <div class="form-group">
+            <label for="txt-position">Posición</label>
+            <input type="text" id="txt-position" />
+          </div>
+        </form>
+        <button
+          class="btn"
+          style="display: none"
+          id="btn-send-action"
+          data-action="add"
+        >
+          Enviar
+        </button>
+      </div>
+      <div id="table-container"></div>
+    </div>
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
